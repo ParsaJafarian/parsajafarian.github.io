@@ -14,6 +14,12 @@
 	border: 8px solid $theme-bg-secondary;
 }
 
+.card {
+	img {
+		max-height: 50%;
+	}
+}
+
 
 .resume-name {
 	letter-spacing: 0.5rem;
