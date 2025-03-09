@@ -4422,6 +4422,17 @@ textarea.form-control-lg {
 .card-img-top,
 .card-img-bottom {
   width: 100%;
+  max-width: 100%;
+  /* Ensures the image is responsive */
+  max-height: 200px;
+  /* Set your preferred maximum height */
+  object-fit: cover;
+  /* Ensures the image is cropped to fit */
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  /* Centers the image */
 }
 
 .card-img,
@@ -12523,6 +12534,10 @@ a.more-link .link-arrow .bi {
   margin-left: -80px;
   top: -80px;
   border: 8px solid rgb(30.3873239437, 38.8957746479, 55.9126760563);
+}
+
+.card img {
+  max-height: 50%;
 }
 
 .resume-name {
