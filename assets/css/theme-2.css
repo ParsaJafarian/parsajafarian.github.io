@@ -13172,6 +13172,9 @@ a.more-link .link-arrow .bi {
 .light-mode .h6 {
   color: #121822;
 }
+.light-mode p {
+  color: rgb(53.3076923077, 71.0769230769, 100.6923076923);
+}
 .light-mode .footer .copyright a {
   color: rgb(53.3076923077, 71.0769230769, 100.6923076923);
 }
