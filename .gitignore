@@ -11,6 +11,7 @@ resume.synctex.gz
 *.log
 *.out
 *.synctex.gz
+*.tex
 
 # OS cruft
 .DS_Store

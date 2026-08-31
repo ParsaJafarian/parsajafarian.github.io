@@ -181,7 +181,7 @@ main {
 }
 
 .nav-links a {
-	font-size: 0.85rem;
+	font-size: 0.95rem;
 	text-decoration: none;
 	color: var(--muted);
 }
@@ -343,7 +343,7 @@ html[data-theme="dark"] .theme-toggle .icon-dark {
 
 .entry + .entry {
 	padding-top: 2.4rem;
-	border-top: 1px solid var(--rule);
+	border-top: 2px solid var(--faint);
 }
 
 .entry:last-child {
@@ -476,20 +476,6 @@ html[data-theme="dark"] .figure-themed .fig-light {
 
 html[data-theme="dark"] .figure-themed .fig-dark {
 	display: block;
-}
-
-.figure-pair {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 0.7rem;
-}
-
-.figure-pair figure {
-	margin: 0;
-}
-
-.figure-pair figcaption {
-	margin-top: 0.35rem;
 }
 
 /* Poster thumbnail card */
@@ -909,11 +895,6 @@ details.bibtex pre {
 
 	.hero-name {
 		font-size: 1.85rem;
-	}
-
-	.figure-pair {
-		grid-template-columns: 1fr;
-		gap: 1rem;
 	}
 
 	.entry-date {
