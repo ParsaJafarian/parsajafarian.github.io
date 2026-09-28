@@ -107,11 +107,66 @@
 			<section class="section" style="padding-top:3rem;" aria-labelledby="projects-label">
 				<h2 class="section-label" id="projects-label">Projects</h2>
 
+				<!-- ---------- Scaling regimes for 2-layer networks ---------- -->
+				<article class="entry grid">
+					<div class="col-main">
+						<div class="entry-head">
+							<h3 class="entry-title">Scaling Regimes for Two-Layer Neural Networks</h3>
+							<span class="entry-date">Dec 2025</span>
+						</div>
+						<p class="entry-org">
+							Course project &middot; MATH 562, Theory of Machine Learning, McGill University
+						</p>
+
+						<div class="entry-body">
+							<p>
+								A two-layer network's behavior as width grows depends on a single scaling
+								factor in front of its output. I compared the three standard choices, Neural
+								Tangent Kernel, Mean Field, and Random Features, across three datasets
+								(synthetic, MNIST, CIFAR-10) and a range of widths, activations, and learning
+								rates.
+							</p>
+							<ul class="findings">
+								<li>
+									<strong>Mean Field</strong> reached the lowest test loss across the board,
+									consistent with its learning rate scaling with width.
+								</li>
+								<li>
+									<strong>Random Features</strong>, which only trains the outer weights,
+									performed worst, as expected from learning fewer features.
+								</li>
+								<li>
+									<strong>NTK</strong> landed in between, with output variance that stays
+									stable rather than shrinking to zero as width grows.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<aside class="col-rail">
+						<figure>
+							<img src="assets/images/ntk_fig.png" loading="lazy"
+								alt="Training loss curves for the NTK regime at widths from 100 to 3200, all decreasing over 1000 iterations with wider networks converging to a higher loss floor.">
+							<figcaption>
+								Training loss under the NTK regime across network widths.
+							</figcaption>
+						</figure>
+						<a class="poster-link" href="assets/images/math562_exerpt.pdf" target="_blank"
+							rel="noopener">
+							<span class="poster-link-text">
+								<span class="poster-link-title">Scaling Regimes for Two-Layer Neural
+									Networks</span>
+								<span class="poster-link-meta">Excerpt (PDF)</span>
+							</span>
+						</a>
+					</aside>
+				</article>
+
 				<!-- ---------- EEG vs sEMG for exoskeleton control ---------- -->
 				<article class="entry grid">
 					<div class="col-main">
 						<div class="entry-head">
-							<h3 class="entry-title">Comparative Analysis of Neurological Signals for Exoskeleton
+							<h3 class="entry-title">Analysis of Neurological Signals for Exoskeleton
 								Control</h3>
 							<span class="entry-date">May 2025</span>
 						</div>

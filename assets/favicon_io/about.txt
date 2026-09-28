@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Tilt Warp
+- Font Title: Leckerli One
 - Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/tiltwarp/v12/AlZc_zVDs5XpmO7yn3w7flUoytXJp3z29uEwmEMLEJljLXvT8UJSZTBxAVfMGOPb.ttf
+- Font Source: https://fonts.gstatic.com/s/leckerlione/v22/V8mCoQH8VCsNttEnxnGQ-1itLZxcBtItFw.ttf
 - Font License: undefined)
