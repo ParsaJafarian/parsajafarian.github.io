@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Research — Parsa Jafarian</title>
 	<meta name="description"
-		content="Research of Parsa Jafarian: machine learning for time series at the McGill Networks Research Lab, and human–robot interaction for elderly care at the McGill NeuRoC Lab.">
+		content="Research of Parsa Jafarian: forecasting under low signal-to-noise and Bayesian spatiotemporal forecasting at the McGill Networks Research Lab, and human–robot interaction for elderly care at the McGill NeuRoC Lab.">
 	<meta name="author" content="Parsa Jafarian">
 
 	<!-- Apply the stored theme before first paint to avoid a flash. -->
@@ -50,7 +50,6 @@
 					<li><a href="projects.html">Projects</a></li>
 					<!-- <li><a href="resume.html">CV</a></li> -->
 				</ul>
-
 				<span class="nav-sep" aria-hidden="true"></span>
 
 				<ul class="nav-icons">
@@ -108,61 +107,40 @@
 				<h2 class="section-label" id="research-label">Research</h2>
 
 				<!-- ---------- Networks Lab ---------- -->
-				<article class="entry grid">
+				<article class="entry grid entry--wide-rail">
 					<div class="col-main">
 						<div class="entry-head">
-							<h3 class="entry-title">Machine Learning Research Intern</h3>
+							<h3 class="entry-title">Forecasting Under Low Signal-to-Noise</h3>
 							<span class="entry-date">Jan 2026 &ndash; present</span>
 						</div>
 						<p class="entry-org">
-							McGill Networks Research Lab &middot; Supervisor: Prof. Mark Coates
+							Machine Learning Research Intern &middot; McGill Networks Research Lab &middot;
+							Supervisor: Prof. Mark Coates
 						</p>
 
 						<div class="entry-body">
-							<p>
-								Time-series forecasting under a low signal-to-noise ratio, using
-								cross-sectional equity returns as the testbed. The goal is twofold: to
-								investigate how well time-series foundation models transfer to high-noise
-								settings, and to investigate deep learning architectures suited to such
-								environments.
-							</p>
-							<ul class="findings">
-								<li>
-									Extending <a href="https://dev.neurips.cc/virtual/2026/poster/142083"
-										target="_blank" rel="noopener"><strong>SLiDE</strong></a>, a
-									Koopman-based recurrent model that adds exogenous inputs to
-									<a href="https://arxiv.org/abs/2506.14113" target="_blank"
-										rel="noopener">SKOLR</a>, for cross-sectional equity return prediction.
-								</li>
-								<li>
-									Training it against a <strong>Sharpe ratio</strong> objective on PCA
-									residuals, rather than a standard error metric.
-								</li>
-								<li>
-									Evaluating time-series foundation models (<strong>Chronos</strong>,
-									<strong>TabPFN</strong>) zero-shot under permutation testing.
-								</li>
-							</ul>
 							<p style="margin-bottom:0;">
-								Continuing through the 2026&ndash;2027 academic year.
+								I study how deep learning and foundation models forecast time series with a
+								low signal-to-noise ratio, with financial data as one example. I evaluated
+								<a href="https://openreview.net/pdf?id=2rJCMiMakf" target="_blank"
+									rel="noopener"><strong>SLiDE</strong></a>, a Koopman recurrent model,
+								against standard baselines and foundation models such as Chronos and TabPFN,
+								and I am now building a TabPFN&ndash;SLiDE hybrid that holds up under noise.
 							</p>
 						</div>
 					</div>
 
 					<aside class="col-rail">
 						<figure class="plate">
-							<img src="assets/images/research/skolr-architecture.png" loading="lazy"
-								alt="Diagram of the SKOLR architecture: an encoder maps a series into parallel latent tracks, each advanced by its own learned linear operator, then recombined by a decoder.">
-							<figcaption>
-								The structured Koopman approximation SLiDE builds on. Figure from Zhang et
-								al., &ldquo;SKOLR: Structured Koopman Operator Linear RNN for Time-Series
-								Forecasting,&rdquo; <em>Proceedings of the 42nd International Conference on
-									Machine Learning</em>, 2025,
-								<a href="https://openreview.net/forum?id=Xg1BGlybfq" target="_blank"
-									rel="noopener">OpenReview</a>.
-							</figcaption>
-						</figure>
-						<figure class="figure-themed">
+								<img src="assets/images/research/slide-architecture.png" loading="lazy"
+									alt="Diagram of the SLiDE architecture: past targets and past exogenous inputs pass through MLPs into a lifted latent state that a linear operator W advances step by step; the same operator then rolls the state forward over the horizon, driven by future exogenous inputs, and an output MLP decodes each step into a forecast.">
+								<figcaption>
+									Figure from P&uuml;tz et al., SLiDE, NeurIPS 2026
+									(<a href="https://openreview.net/pdf?id=2rJCMiMakf" target="_blank"
+										rel="noopener">OpenReview</a>).
+								</figcaption>
+							</figure>
+						<figure class="figure-themed figure-small">
 							<img class="fig-light" src="assets/images/research/pnl-illustrative-light.png"
 								loading="lazy"
 								alt="Six cumulative profit-and-loss curves drifting upward from zero with shared drawdowns; the axes carry no scale.">
@@ -176,47 +154,85 @@
 					</aside>
 				</article>
 
-				<!-- ---------- NeuRoC Lab ---------- -->
-				<article class="entry grid">
+				<!-- ---------- Networks Lab: Bayesian spatiotemporal ---------- -->
+				<article class="entry grid" id="bayesian">
 					<div class="col-main">
 						<div class="entry-head">
-							<h3 class="entry-title">Robotics Research Assistant</h3>
-							<span class="entry-date">Sep &ndash; Dec 2025</span>
+							<h3 class="entry-title">Bayesian Spatiotemporal Forecasting</h3>
+							<span class="entry-date">Oct 2026</span>
 						</div>
 						<p class="entry-org">
-							McGill NeuRoC Lab &middot; Supervisor: Prof. Guillaume Durandau
+							Machine Learning Research Intern &middot; McGill Networks Research Lab &middot;
+							Supervisor: Prof. Mark Coates
 						</p>
 
 						<div class="entry-body">
 							<p>
-								Physical human&ndash;robot interaction in elderly care, where a robot and an
-								older adult jointly carry an object and tremor makes naive force-following
-								unsafe. Most HRI research relies on robot simulators or biomechanics platforms
-								in isolation, with no coupled human&ndash;robot dynamics; this project builds a
-								simulation framework that couples the two directly, so interaction forces
-								emerge from the physics itself, and a controller on top of it for tremor
-								mitigation.
+								Many forecasting problems involve variables linked by a network, such as
+								sensors along a road network. The goal of this project is a Bayesian version
+								of SLiDE that reports how uncertain its forecasts are and uses the graph
+								that connects its inputs.
+							</p>
+							<p style="margin-bottom:0;">
+								I worked on adding <strong>Bayesian graph priors</strong> to this Bayesian
+								graphical formulation of SLiDE. The work led to a co-authored paper accepted
+								at the <strong>Asilomar Conference on Signals, Systems, and Computers
+									2026</strong>.
+							</p>
+						</div>
+					</div>
+
+					<aside class="col-rail">
+						<figure class="plate">
+							<img src="assets/images/research/stgcn-graph-data.png" loading="lazy"
+								alt="Stacked frames of the same sensor graph at successive time steps, from the start of the input window to the end of the forecast horizon; node shading changes from frame to frame.">
+							<figcaption>
+								Figure from Yu et al., STGCN, IJCAI 2018
+								(<a href="https://arxiv.org/abs/1709.04875" target="_blank"
+									rel="noopener">arXiv</a>).
+							</figcaption>
+						</figure>
+					</aside>
+				</article>
+
+				<!-- ---------- NeuRoC Lab ---------- -->
+				<article class="entry grid entry--wide-rail" id="hri">
+					<div class="col-main">
+						<div class="entry-head">
+							<h3 class="entry-title">Human&ndash;Robot Interaction for Elderly Care</h3>
+							<span class="entry-date">Sep &ndash; Dec 2025</span>
+						</div>
+						<p class="entry-org">
+							Robotics Research Assistant &middot; McGill NeuRoC Lab &middot; Supervisor:
+							Prof. Guillaume Durandau
+						</p>
+
+						<div class="entry-body">
+							<p>
+								Human&ndash;robot interaction can help older adults live more independently.
+								A common task is co-manipulating a heavy object, usually with admittance
+								control. Three gaps remain:
 							</p>
 							<ul class="findings">
-								<li>
-									First-author extended abstract accepted at <strong>ICNR 2026</strong>; code
-									released at
-									<a href="https://github.com/NeuRoC-Lab/HRI-controller" target="_blank"
-										rel="noopener">NeuRoC-Lab/HRI-controller</a>.
-								</li>
-								<li>
-									Built a <strong>MuJoCo</strong> framework coupling a MyoSuite
-									musculoskeletal arm to a torque-controlled Rethink Sawyer, so interaction
-									forces emerge from the physics rather than being prescribed.
-								</li>
-								<li>
-									Designed a series <strong>admittance&ndash;impedance controller</strong>
-									reaching <span class="num">~98%</span> tremor attenuation at
-									<span class="num">4&ndash;14%</span> tracking RMSE.
-								</li>
+								<li>Most research relies on physical experiments, which limits scale and
+									accessibility.</li>
+								<li>Simulators treat the human as an input rather than a model, so the
+									coupled human&ndash;robot dynamics go unstudied.</li>
+								<li>Few works address tremor, which matters in elderly care.</li>
 							</ul>
+							<p>
+								To address these, I built a <strong>MuJoCo</strong> simulation that couples a
+								musculoskeletal human arm with a robot arm, and implemented an
+								admittance&ndash;impedance controller with a Butterworth filter to suppress
+								tremor.
+							</p>
 							<p style="margin-bottom:0;">
-								A short write-up is also
+								The results are in my first-author extended abstract accepted at
+								<strong>ICNR 2026</strong>
+								(<a href="assets/docs/icnr2026-poster.pdf" target="_blank"
+									rel="noopener">poster</a>). The code is at
+								<a href="https://github.com/NeuRoC-Lab/HRI-controller" target="_blank"
+									rel="noopener">NeuRoC-Lab/HRI-controller</a>, and there is a short write-up
 								<a href="https://www.linkedin.com/posts/parsa-jafarian_im-happy-to-share-that-our-work-a-new-ugcPost-7489791008789110784-R-qD/"
 									target="_blank" rel="noopener">on LinkedIn</a>.
 							</p>
@@ -228,10 +244,7 @@
 						<figure>
 							<img src="assets/images/research/robot-sim-env.jpeg" loading="lazy"
 								alt="MuJoCo simulation: a skeletal human arm and a red Rethink Sawyer robot arm jointly holding a translucent panel.">
-							<figcaption>
-								A MyoSuite musculoskeletal arm and a Rethink Sawyer co-manipulating an object
-								in MuJoCo.
-							</figcaption>
+							<figcaption>Simulation environment in MuJoCo.</figcaption>
 						</figure>
 
 						<figure>
@@ -266,44 +279,12 @@
 
 			</section>
 
-			<!-- ============================= Publications ============================= -->
-			<section class="section section--text" aria-labelledby="publications-label">
-				<h2 class="section-label" id="publications-label">Publications</h2>
+			<section class="section section--text" aria-label="Publications">
 				<div class="grid">
 					<div class="col-main">
-						<div class="citation">
-							<p>
-								<strong>P. Jafarian</strong>, M. Kaviri, W. Suleiman, and G. Durandau.
-								&ldquo;A New Simulation Framework for the Design of Human&ndash;Robot
-								Controllers in Elderly Care.&rdquo;
-								<span class="venue">Extended abstract, <em>International Conference on
-										NeuroRehabilitation</em> (ICNR), 2026.</span>
-								<span class="badge">In press</span>
-							</p>
-							<p class="citation-links">
-								<a href="assets/docs/icnr2026-poster.pdf" target="_blank"
-									rel="noopener">Poster</a> &middot;
-								<a href="https://github.com/NeuRoC-Lab/HRI-controller" target="_blank"
-									rel="noopener">Code</a>
-							</p>
-
-							<details class="bibtex">
-								<summary>BibTeX</summary>
-								<pre>@inproceedings{jafarian2026simulation,
-  author    = {Jafarian, Parsa and Kaviri, Mostafa and
-               Suleiman, Wael and Durandau, Guillaume},
-  title     = {A New Simulation Framework for the Design of
-               Human--Robot Controllers in Elderly Care},
-  booktitle = {International Conference on NeuroRehabilitation (ICNR)},
-  year      = {2026},
-  note      = {Extended abstract, in press}
-}</pre>
-							</details>
-						</div>
-
-						<!-- <p class="next-link">
-							<a href="resume.html">See the full CV &rarr;</a>
-						</p> -->
+						<p class="next-link" style="margin-top:0;">
+							<a href="index.html#publications-label">See the publications list &rarr;</a>
+						</p>
 					</div>
 				</div>
 			</section>
@@ -315,7 +296,7 @@
 		<div class="wrap">
 			<div class="footer-inner">
 				<span>&copy; 2026 Parsa Jafarian</span>
-				<span>Last updated <time datetime="2026-09-28">28 September 2026</time></span>
+				<span>Last updated <time datetime="2026-11-21">21 November 2026</time></span>
 				<span class="spacer"></span>
 				<a href="mailto:parsa.jafarian@mail.mcgill.ca">Email</a>
 				<a href="index.html">About</a>

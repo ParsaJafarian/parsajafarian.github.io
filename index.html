@@ -34,6 +34,9 @@
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
 		rel="stylesheet">
 
+	<link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="assets/fontawesome/css/solid.min.css">
+	<link rel="stylesheet" href="assets/fontawesome/css/brands.min.css">
 	<link rel="stylesheet" href="assets/css/site.css">
 
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
@@ -56,7 +59,6 @@
 					<li><a href="projects.html">Projects</a></li>
 					<!-- <li><a href="resume.html">CV</a></li> -->
 				</ul>
-
 				<span class="nav-sep" aria-hidden="true"></span>
 
 				<ul class="nav-icons">
@@ -114,32 +116,118 @@
 				<div class="col-main intro-body">
 					<h1 class="hero-name">Parsa Jafarian</h1>
 					<p class="hero-role">
-						B.Eng. Software Engineering (Co-op) and Minor in Mathematics, McGill University.
+						Undergraduate student in Software Engineering and Mathematics
 					</p>
-					<ul class="hero-links">
-						<li><a href="mailto:parsa.jafarian@mail.mcgill.ca">parsa.jafarian@mail.mcgill.ca</a></li>
-						<!-- <li><a href="resume.html">CV</a></li> -->
-						<li><a href="https://github.com/parsajafarian" target="_blank" rel="noopener">GitHub</a></li>
-						<li><a href="https://linkedin.com/in/parsa-jafarian" target="_blank"
-								rel="noopener">LinkedIn</a></li>
+					<p class="hero-aff">
+						<a href="https://www.mcgill.ca" target="_blank" rel="noopener">McGill University</a>
+					</p>
+					<ul class="icon-links">
+						<li>
+							<a href="mailto:parsa.jafarian@mail.mcgill.ca" title="Email" aria-label="Email">
+								<i class="fa-solid fa-envelope" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/parsajafarian" target="_blank" rel="noopener"
+								title="GitHub" aria-label="GitHub">
+								<i class="fa-brands fa-github" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://linkedin.com/in/parsa-jafarian" target="_blank" rel="noopener"
+								title="LinkedIn" aria-label="LinkedIn">
+								<i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li><a class="icon-text" href="resume.pdf" target="_blank" rel="noopener">CV</a></li>
 					</ul>
 
+					<h2 class="section-label" id="about-label">About</h2>
 					<p class="lede">
-						I work on <strong>machine learning for time series</strong> and
-						<strong>applied mathematics</strong>, mostly forecasting under heavy noise and the
-						statistical modeling that makes it tractable.
+						I am a B.Eng. Software Engineering student with a minor in Mathematics at
+						<a href="https://www.mcgill.ca" target="_blank" rel="noopener">McGill University</a>.
+						I am currently conducting research at the
+						<a href="https://www.tsp.ece.mcgill.ca/Networks/" target="_blank" rel="noopener">McGill
+							Networks Research Lab</a> with
+						<a href="https://www.ece.mcgill.ca/~mcoate/" target="_blank" rel="noopener">Prof. Mark
+							Coates</a> on how deep learning and foundation models forecast in noisy time
+						series, such as financial data.
 					</p>
 					<p>
-						I am currently a research intern at the <strong>McGill Networks Research Lab</strong>
-						with Prof. Mark Coates, studying how sequence models behave when the signal-to-noise
-						ratio is low, using cross-sectional equity returns as the testbed. Before that I built
-						a simulation framework for human&ndash;robot interaction at the <strong>NeuRoC
-							Lab</strong> with Prof. Guillaume Durandau, which led to a first-author extended
-						abstract accepted at ICNR&nbsp;2026.
+						Before that, I was at the
+						<a href="https://www.mcgill.ca/neuroc-lab/" target="_blank" rel="noopener">NeuRoC Lab</a>
+						with
+						<a href="https://www.mcgill.ca/mecheng/guillaume-durandau" target="_blank"
+							rel="noopener">Prof. Guillaume Durandau</a>, working on human&ndash;robot
+						interaction for elderly care.
+					</p>
+					<p>
+						My current research interests are in <strong>machine learning for time
+							series</strong> and <strong>spatiotemporal data</strong>.
 					</p>
 					<p style="margin-bottom:0;">
 						<a href="research.html">Read more about my research &rarr;</a>
 					</p>
+
+					<!-- ============================= Publications ============================= -->
+					<section class="hero-pubs" aria-labelledby="publications-label">
+						<h2 class="section-label" id="publications-label">Publications</h2>
+						<div class="citation">
+							<p>
+								T. Glavas, S. P&uuml;tz, <strong>P. Jafarian</strong>, B. N. Oreshkin, and
+								M. Coates. &ldquo;Bayesian Koopman-inspired Time-series Forecasting with
+								Graph-encoded Exogenous Information.&rdquo;
+								<span class="venue"><em>Asilomar Conference on Signals, Systems, and
+										Computers</em>, 2026.</span>
+								<span class="badge">Accepted</span>
+							</p>
+
+							<details class="bibtex">
+								<summary>BibTeX</summary>
+								<pre>@inproceedings{glavas2026bayesian,
+  author    = {Glavas, Theodore and P{\"u}tz, Sebastian and
+               Jafarian, Parsa and Oreshkin, Boris N. and
+               Coates, Mark},
+  title     = {Bayesian {Koopman}-inspired Time-series Forecasting
+               with Graph-encoded Exogenous Information},
+  booktitle = {Asilomar Conference on Signals, Systems,
+               and Computers},
+  year      = {2026},
+  note      = {Accepted}
+}</pre>
+							</details>
+						</div>
+
+						<div class="citation">
+							<p>
+								<strong>P. Jafarian</strong>, M. Kaviri, W. Suleiman, and G. Durandau.
+								&ldquo;A New Simulation Framework for the Design of Human&ndash;Robot
+								Controllers in Elderly Care.&rdquo;
+								<span class="venue">Extended abstract, <em>International Conference on
+										NeuroRehabilitation</em> (ICNR), 2026.</span>
+								<span class="badge">In press</span>
+							</p>
+							<p class="citation-links">
+								<a href="assets/docs/icnr2026-poster.pdf" target="_blank"
+									rel="noopener">Poster</a> &middot;
+								<a href="https://github.com/NeuRoC-Lab/HRI-controller" target="_blank"
+									rel="noopener">Code</a>
+							</p>
+
+							<details class="bibtex">
+								<summary>BibTeX</summary>
+								<pre>@inproceedings{jafarian2026simulation,
+  author    = {Jafarian, Parsa and Kaviri, Mostafa and
+               Suleiman, Wael and Durandau, Guillaume},
+  title     = {A New Simulation Framework for the Design of
+               Human--Robot Controllers in Elderly Care},
+  booktitle = {International Conference on NeuroRehabilitation (ICNR)},
+  year      = {2026},
+  note      = {Extended abstract, in press}
+}</pre>
+							</details>
+						</div>
+					</section>
 				</div>
 
 				<figure class="col-rail hero-portrait">
@@ -147,33 +235,6 @@
 						alt="Parsa Jafarian standing in front of his research poster at a conference session.">
 					<figcaption>JSPS Poster &amp; Networking Session, Concordia University, 2026.</figcaption>
 				</figure>
-			</section>
-
-			<!-- ============================= Education ============================= -->
-			<section class="section section--text" aria-labelledby="education-label">
-				<h2 class="section-label" id="education-label">Education</h2>
-				<div class="grid">
-					<div class="col-main">
-						<div class="rows">
-							<div class="row-item">
-								<div class="row-main">
-									<strong>McGill University</strong>
-									<span class="row-note">B.Eng. Software Engineering (Co-op), Minor in
-										Mathematics &middot; GPA 3.94/4.00</span>
-								</div>
-								<div class="row-aside">Aug 2024 &ndash; Apr 2028</div>
-							</div>
-							<div class="row-item">
-								<div class="row-main">
-									Selected coursework
-									<span class="row-note">Honours Stochastic Processes &middot; Mathematical
-										Finance &middot; Applied Machine Learning &middot; Theory of Machine
-										Learning &middot; Analysis 1</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</section>
 
 			<!-- ============================= Awards ============================= -->
@@ -213,7 +274,7 @@
 				</div>
 			</section>
 
-			<!-- ============================= Personal ============================= -->
+			<!-- ============================= Personal (hidden for now) =============================
 			<section class="section section--text" aria-labelledby="beyond-label">
 				<h2 class="section-label" id="beyond-label">Beyond Research</h2>
 				<div class="grid">
@@ -237,12 +298,13 @@
 							</li>
 							<li>
 								<span class="what">Running &amp; swimming</span>
-								<span class="desc">I swim in the winter and run in the summer. 
+								<span class="desc">I swim in the winter and run in the summer.</span>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</section>
+			============================================================================== -->
 
 		</div>
 	</main>
@@ -251,7 +313,7 @@
 		<div class="wrap">
 			<div class="footer-inner">
 				<span>&copy; 2026 Parsa Jafarian</span>
-				<span>Last updated <time datetime="2026-09-28">28 September 2026</time></span>
+				<span>Last updated <time datetime="2026-11-21">21 November 2026</time></span>
 				<span class="spacer"></span>
 				<a href="mailto:parsa.jafarian@mail.mcgill.ca">Email</a>
 				<a href="research.html">Research</a>
