@@ -164,7 +164,6 @@ main {
 /* ---------- Header / nav ---------- */
 
 .site-header {
-	border-top: 3px solid var(--accent);
 	border-bottom: 1px solid var(--rule);
 	background: var(--bg);
 	position: sticky;
@@ -309,6 +308,16 @@ html[data-theme="dark"] .theme-toggle .icon-dark {
 .hero-aff {
 	margin: -0.55rem 0 0;
 	font-size: 1rem;
+}
+
+.hero-aff a {
+	color: var(--text);
+	text-decoration-color: var(--rule);
+}
+
+.hero-aff a:hover {
+	color: var(--accent);
+	text-decoration-color: var(--accent);
 }
 
 /* Icon row under the name: Font Awesome glyphs plus a text "CV" link. */
